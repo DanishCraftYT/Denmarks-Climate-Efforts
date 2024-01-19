@@ -1,0 +1,173 @@
+[gd_scene load_steps=11 format=3 uid="uid://coypalerdkr4k"]
+
+[ext_resource type="Script" path="res://Scripts/UI/MainMenuScript.gd" id="1_flx1b"]
+[ext_resource type="FontFile" uid="uid://c3sya0iujd34p" path="res://Fonts/Teko/Teko-VariableFont_wght.ttf" id="2_aip24"]
+[ext_resource type="Texture2D" uid="uid://cumdfls4d4825" path="res://Images/LA.png" id="3_x4kfo"]
+[ext_resource type="Script" path="res://Scripts/UI/Credits.gd" id="3_ym3mm"]
+[ext_resource type="Texture2D" uid="uid://diy64ldkf288g" path="res://Images/RA.png" id="4_ce0v5"]
+[ext_resource type="Texture2D" uid="uid://dlctyqmhkgxnd" path="res://Images/DA.png" id="5_80vw7"]
+[ext_resource type="Texture2D" uid="uid://c11ei5ubp8tkf" path="res://Images/UA.png" id="6_7keyf"]
+[ext_resource type="AudioStream" uid="uid://db4b2dsskk3b5" path="res://Sounds/DVAU SCREAM.mp3" id="8_j2u4f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lvmal"]
+font = ExtResource("2_aip24")
+font_size = 150
+
+[sub_resource type="LabelSettings" id="LabelSettings_04n2i"]
+font_size = 30
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_flx1b")
+
+[node name="Main" type="Node2D" parent="."]
+visible = false
+
+[node name="Title" type="Label" parent="Main"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -466.0
+offset_top = -280.0
+offset_right = 476.0
+offset_bottom = -64.0
+grow_horizontal = 2
+text = "Danmarks Klimaindsats"
+label_settings = SubResource("LabelSettings_lvmal")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Info" type="Button" parent="Main"]
+offset_left = -101.0
+offset_top = -10.0
+offset_right = 103.0
+offset_bottom = 34.0
+text = "Info"
+
+[node name="Minigames" type="Button" parent="Main"]
+offset_left = -101.0
+offset_top = 70.0
+offset_right = 103.0
+offset_bottom = 114.0
+text = "Minigames"
+
+[node name="Credits" type="Button" parent="Main"]
+offset_left = -101.0
+offset_top = 150.0
+offset_right = 103.0
+offset_bottom = 194.0
+text = "Credits"
+
+[node name="Exit" type="Button" parent="Main"]
+offset_left = -101.0
+offset_top = 230.0
+offset_right = 103.0
+offset_bottom = 274.0
+text = "Exit"
+
+[node name="Minigames" type="Node2D" parent="."]
+visible = false
+
+[node name="Title" type="Label" parent="Minigames"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -466.0
+offset_top = -280.0
+offset_right = 476.0
+offset_bottom = -64.0
+grow_horizontal = 2
+text = "Minigames"
+label_settings = SubResource("LabelSettings_lvmal")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SEF" type="Button" parent="Minigames"]
+offset_left = -101.0
+offset_top = -10.0
+offset_right = 103.0
+offset_bottom = 34.0
+text = "Sandt eller falsk"
+
+[node name="MainMenu" type="Button" parent="Minigames"]
+offset_left = -101.0
+offset_top = 70.0
+offset_right = 103.0
+offset_bottom = 114.0
+text = "Main Menu"
+
+[node name="Credits" type="Node2D" parent="."]
+script = ExtResource("3_ym3mm")
+
+[node name="Title" type="Label" parent="Credits"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -466.0
+offset_top = -280.0
+offset_right = 476.0
+offset_bottom = -64.0
+grow_horizontal = 2
+text = "Credits"
+label_settings = SubResource("LabelSettings_lvmal")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Credits"]
+offset_left = -136.0
+offset_top = -92.0
+offset_right = 167.0
+offset_bottom = -48.0
+text = "lavet af Danish Craft."
+label_settings = SubResource("LabelSettings_04n2i")
+
+[node name="MainMenu" type="Button" parent="Credits"]
+offset_left = -101.0
+offset_top = -10.0
+offset_right = 103.0
+offset_bottom = 34.0
+text = "Main Menu"
+
+[node name="LB" type="Button" parent="Credits"]
+offset_left = -520.0
+offset_top = 154.0
+offset_right = -412.0
+offset_bottom = 262.0
+icon = ExtResource("3_x4kfo")
+
+[node name="RB" type="Button" parent="Credits"]
+offset_left = -314.0
+offset_top = 153.0
+offset_right = -206.0
+offset_bottom = 261.0
+icon = ExtResource("4_ce0v5")
+
+[node name="DB" type="Button" parent="Credits"]
+offset_left = -416.0
+offset_top = 155.0
+offset_right = -308.0
+offset_bottom = 263.0
+icon = ExtResource("5_80vw7")
+
+[node name="UB" type="Button" parent="Credits"]
+offset_left = -416.0
+offset_top = 51.0
+offset_right = -308.0
+offset_bottom = 159.0
+icon = ExtResource("6_7keyf")
+
+[node name="DVAUPlayer" type="AudioStreamPlayer2D" parent="Credits"]
+stream = ExtResource("8_j2u4f")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="pressed" from="Main/Info" to="." method="_on_info_pressed"]
+[connection signal="pressed" from="Main/Minigames" to="." method="_on_minigames_pressed"]
+[connection signal="pressed" from="Main/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Main/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Minigames/SEF" to="." method="_on_sef_pressed"]
+[connection signal="pressed" from="Minigames/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="Credits/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="Credits/LB" to="Credits" method="_on_lb_pressed"]
+[connection signal="pressed" from="Credits/RB" to="Credits" method="_on_rb_pressed"]
+[connection signal="pressed" from="Credits/DB" to="Credits" method="_on_db_pressed"]
+[connection signal="pressed" from="Credits/UB" to="Credits" method="_on_ub_pressed"]

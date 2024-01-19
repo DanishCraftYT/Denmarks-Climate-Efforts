@@ -1,0 +1,419 @@
+[gd_scene load_steps=10 format=3 uid="uid://dj5eqruolkxal"]
+
+[ext_resource type="PackedScene" uid="uid://cc01gptkrf2ld" path="res://Nodes/Player.tscn" id="1_lvbk4"]
+[ext_resource type="Texture2D" uid="uid://dee6yhj1qc82g" path="res://Images/white.jpg" id="2_vrlua"]
+[ext_resource type="Script" path="res://GameScenes/Minigames/SEFBoards.gd" id="3_qvtfv"]
+[ext_resource type="Script" path="res://Scripts/UI/ExitScreen.gd" id="4_3tauy"]
+[ext_resource type="FontFile" uid="uid://c3sya0iujd34p" path="res://Fonts/Teko/Teko-VariableFont_wght.ttf" id="4_oeihc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7lgi2"]
+font_size = 33
+
+[sub_resource type="LabelSettings" id="LabelSettings_him4x"]
+font_size = 150
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lfp0l"]
+font_size = 150
+
+[sub_resource type="LabelSettings" id="LabelSettings_7uj4h"]
+font = ExtResource("4_oeihc")
+font_size = 150
+
+[node name="SEF" type="Node2D"]
+
+[node name="Minigame" type="Node2D" parent="."]
+
+[node name="Player" parent="Minigame" instance=ExtResource("1_lvbk4")]
+
+[node name="Score" type="Label" parent="Minigame/Player"]
+offset_left = -569.0
+offset_top = -294.0
+offset_right = -424.0
+offset_bottom = -241.0
+text = "score: 0"
+label_settings = SubResource("LabelSettings_7lgi2")
+
+[node name="SEFBoard" type="Sprite2D" parent="Minigame"]
+position = Vector2(2.50002, -1.14441e-05)
+scale = Vector2(0.415527, 0.300781)
+texture = ExtResource("2_vrlua")
+script = ExtResource("3_qvtfv")
+
+[node name="Title" type="Label" parent="Minigame/SEFBoard"]
+offset_left = -985.0
+offset_top = -963.0
+offset_right = 983.0
+offset_bottom = -758.0
+text = "er det sandt at Danmark vil
+indfange CO2?"
+label_settings = SubResource("LabelSettings_him4x")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="True" type="Button" parent="Minigame/SEFBoard"]
+offset_left = -825.0
+offset_top = 685.0
+offset_right = -211.0
+offset_bottom = 908.0
+
+[node name="TrueText" type="Label" parent="Minigame/SEFBoard/True"]
+layout_mode = 0
+offset_right = 614.0
+offset_bottom = 226.0
+text = "Sandt"
+label_settings = SubResource("LabelSettings_lfp0l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="False" type="Button" parent="Minigame/SEFBoard"]
+offset_left = 200.0
+offset_top = 685.0
+offset_right = 814.0
+offset_bottom = 908.0
+
+[node name="FalseText" type="Label" parent="Minigame/SEFBoard/False"]
+layout_mode = 0
+offset_right = 614.0
+offset_bottom = 226.0
+text = "Falsk"
+label_settings = SubResource("LabelSettings_lfp0l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SEFBoard2" type="Sprite2D" parent="Minigame"]
+position = Vector2(2002.5, 0)
+scale = Vector2(0.415527, 0.300781)
+texture = ExtResource("2_vrlua")
+script = ExtResource("3_qvtfv")
+
+[node name="Title" type="Label" parent="Minigame/SEFBoard2"]
+offset_left = -985.0
+offset_top = -963.0
+offset_right = 983.0
+offset_bottom = -758.0
+text = "er det sandt at Danmark
+skal være klimaneutral i
+2060?"
+label_settings = SubResource("LabelSettings_him4x")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="True" type="Button" parent="Minigame/SEFBoard2"]
+offset_left = -825.0
+offset_top = 685.0
+offset_right = -211.0
+offset_bottom = 908.0
+
+[node name="TrueText" type="Label" parent="Minigame/SEFBoard2/True"]
+layout_mode = 0
+offset_right = 614.0
+offset_bottom = 226.0
+text = "Sandt"
+label_settings = SubResource("LabelSettings_lfp0l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="False" type="Button" parent="Minigame/SEFBoard2"]
+offset_left = 200.0
+offset_top = 685.0
+offset_right = 814.0
+offset_bottom = 908.0
+
+[node name="FalseText" type="Label" parent="Minigame/SEFBoard2/False"]
+layout_mode = 0
+offset_right = 614.0
+offset_bottom = 226.0
+text = "Falsk"
+label_settings = SubResource("LabelSettings_lfp0l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SEFBoard3" type="Sprite2D" parent="Minigame"]
+position = Vector2(4002.5, 0)
+scale = Vector2(0.415527, 0.300781)
+texture = ExtResource("2_vrlua")
+script = ExtResource("3_qvtfv")
+
+[node name="Title" type="Label" parent="Minigame/SEFBoard3"]
+offset_left = -985.0
+offset_top = -963.0
+offset_right = 983.0
+offset_bottom = -758.0
+text = "er det sandt at danmark
+har reduceret deres
+udledese med 43 procent?"
+label_settings = SubResource("LabelSettings_him4x")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="True" type="Button" parent="Minigame/SEFBoard3"]
+offset_left = -825.0
+offset_top = 685.0
+offset_right = -211.0
+offset_bottom = 908.0
+
+[node name="TrueText" type="Label" parent="Minigame/SEFBoard3/True"]
+layout_mode = 0
+offset_right = 614.0
+offset_bottom = 226.0
+text = "Sandt"
+label_settings = SubResource("LabelSettings_lfp0l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="False" type="Button" parent="Minigame/SEFBoard3"]
+offset_left = 200.0
+offset_top = 685.0
+offset_right = 814.0
+offset_bottom = 908.0
+
+[node name="FalseText" type="Label" parent="Minigame/SEFBoard3/False"]
+layout_mode = 0
+offset_right = 614.0
+offset_bottom = 226.0
+text = "Falsk"
+label_settings = SubResource("LabelSettings_lfp0l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SEFBoard4" type="Sprite2D" parent="Minigame"]
+position = Vector2(6002.5, 0)
+scale = Vector2(0.415527, 0.300781)
+texture = ExtResource("2_vrlua")
+script = ExtResource("3_qvtfv")
+
+[node name="Title" type="Label" parent="Minigame/SEFBoard4"]
+offset_left = -985.0
+offset_top = -963.0
+offset_right = 983.0
+offset_bottom = -758.0
+text = "for Danmark omkring 53%
+af deres energi fra solen?"
+label_settings = SubResource("LabelSettings_him4x")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="True" type="Button" parent="Minigame/SEFBoard4"]
+offset_left = -825.0
+offset_top = 685.0
+offset_right = -211.0
+offset_bottom = 908.0
+
+[node name="TrueText" type="Label" parent="Minigame/SEFBoard4/True"]
+layout_mode = 0
+offset_right = 614.0
+offset_bottom = 226.0
+text = "Sandt"
+label_settings = SubResource("LabelSettings_lfp0l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="False" type="Button" parent="Minigame/SEFBoard4"]
+offset_left = 200.0
+offset_top = 685.0
+offset_right = 814.0
+offset_bottom = 908.0
+
+[node name="FalseText" type="Label" parent="Minigame/SEFBoard4/False"]
+layout_mode = 0
+offset_right = 614.0
+offset_bottom = 226.0
+text = "Falsk"
+label_settings = SubResource("LabelSettings_lfp0l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SEFBoard5" type="Sprite2D" parent="Minigame"]
+position = Vector2(8002.5, 0)
+scale = Vector2(0.415527, 0.300781)
+texture = ExtResource("2_vrlua")
+script = ExtResource("3_qvtfv")
+
+[node name="Title" type="Label" parent="Minigame/SEFBoard5"]
+offset_left = -985.0
+offset_top = -963.0
+offset_right = 983.0
+offset_bottom = -758.0
+text = "er det sandt at energi,
+industri og varme sektor
+udleder mindst CO2?"
+label_settings = SubResource("LabelSettings_him4x")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="True" type="Button" parent="Minigame/SEFBoard5"]
+offset_left = -825.0
+offset_top = 685.0
+offset_right = -211.0
+offset_bottom = 908.0
+
+[node name="TrueText" type="Label" parent="Minigame/SEFBoard5/True"]
+layout_mode = 0
+offset_right = 614.0
+offset_bottom = 226.0
+text = "Sandt"
+label_settings = SubResource("LabelSettings_lfp0l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="False" type="Button" parent="Minigame/SEFBoard5"]
+offset_left = 200.0
+offset_top = 685.0
+offset_right = 814.0
+offset_bottom = 908.0
+
+[node name="FalseText" type="Label" parent="Minigame/SEFBoard5/False"]
+layout_mode = 0
+offset_right = 614.0
+offset_bottom = 226.0
+text = "Falsk"
+label_settings = SubResource("LabelSettings_lfp0l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SEFBoard6" type="Sprite2D" parent="Minigame"]
+position = Vector2(10002.5, 0)
+scale = Vector2(0.415527, 0.300781)
+texture = ExtResource("2_vrlua")
+script = ExtResource("3_qvtfv")
+
+[node name="Title" type="Label" parent="Minigame/SEFBoard6"]
+offset_left = -985.0
+offset_top = -963.0
+offset_right = 983.0
+offset_bottom = -758.0
+text = "er det sandt at Danmark
+vil give penge til en
+grønnere industri?"
+label_settings = SubResource("LabelSettings_him4x")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="True" type="Button" parent="Minigame/SEFBoard6"]
+offset_left = -825.0
+offset_top = 685.0
+offset_right = -211.0
+offset_bottom = 908.0
+
+[node name="TrueText" type="Label" parent="Minigame/SEFBoard6/True"]
+layout_mode = 0
+offset_right = 614.0
+offset_bottom = 226.0
+text = "Sandt"
+label_settings = SubResource("LabelSettings_lfp0l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="False" type="Button" parent="Minigame/SEFBoard6"]
+offset_left = 200.0
+offset_top = 685.0
+offset_right = 814.0
+offset_bottom = 908.0
+
+[node name="FalseText" type="Label" parent="Minigame/SEFBoard6/False"]
+layout_mode = 0
+offset_right = 614.0
+offset_bottom = 226.0
+text = "Falsk"
+label_settings = SubResource("LabelSettings_lfp0l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SEFBoard7" type="Sprite2D" parent="Minigame"]
+position = Vector2(12002.5, 0)
+scale = Vector2(0.415527, 0.300781)
+texture = ExtResource("2_vrlua")
+script = ExtResource("3_qvtfv")
+
+[node name="Title" type="Label" parent="Minigame/SEFBoard7"]
+offset_left = -985.0
+offset_top = -963.0
+offset_right = 983.0
+offset_bottom = -758.0
+text = "er det sandt at Danmark
+vil reducere CO2
+udledningen med 80%
+i forhold til 1990?"
+label_settings = SubResource("LabelSettings_him4x")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="True" type="Button" parent="Minigame/SEFBoard7"]
+offset_left = -825.0
+offset_top = 685.0
+offset_right = -211.0
+offset_bottom = 908.0
+
+[node name="TrueText" type="Label" parent="Minigame/SEFBoard7/True"]
+layout_mode = 0
+offset_right = 614.0
+offset_bottom = 226.0
+text = "Sandt"
+label_settings = SubResource("LabelSettings_lfp0l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="False" type="Button" parent="Minigame/SEFBoard7"]
+offset_left = 200.0
+offset_top = 685.0
+offset_right = 814.0
+offset_bottom = 908.0
+
+[node name="FalseText" type="Label" parent="Minigame/SEFBoard7/False"]
+layout_mode = 0
+offset_right = 614.0
+offset_bottom = 226.0
+text = "Falsk"
+label_settings = SubResource("LabelSettings_lfp0l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitScreen" type="Node2D" parent="."]
+visible = false
+script = ExtResource("4_3tauy")
+
+[node name="Title" type="Label" parent="ExitScreen"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -466.0
+offset_top = -280.0
+offset_right = 476.0
+offset_bottom = -64.0
+grow_horizontal = 2
+text = "CONGRATS!"
+label_settings = SubResource("LabelSettings_7uj4h")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FinalScore" type="Label" parent="ExitScreen"]
+offset_left = -163.0
+offset_top = -98.0
+offset_right = 163.0
+offset_bottom = -37.0
+text = "you got: 0 points"
+label_settings = SubResource("LabelSettings_7lgi2")
+
+[node name="MainMenu" type="Button" parent="ExitScreen"]
+offset_left = -101.0
+offset_top = -10.0
+offset_right = 103.0
+offset_bottom = 34.0
+text = "Main Menu"
+
+[connection signal="pressed" from="Minigame/SEFBoard/True" to="Minigame/SEFBoard" method="_on_true_pressed"]
+[connection signal="pressed" from="Minigame/SEFBoard/False" to="Minigame/SEFBoard" method="_on_false_pressed"]
+[connection signal="pressed" from="Minigame/SEFBoard2/True" to="Minigame/SEFBoard2" method="_on_true_pressed"]
+[connection signal="pressed" from="Minigame/SEFBoard2/False" to="Minigame/SEFBoard2" method="_on_false_pressed"]
+[connection signal="pressed" from="Minigame/SEFBoard3/True" to="Minigame/SEFBoard3" method="_on_true_pressed"]
+[connection signal="pressed" from="Minigame/SEFBoard3/False" to="Minigame/SEFBoard3" method="_on_false_pressed"]
+[connection signal="pressed" from="Minigame/SEFBoard4/True" to="Minigame/SEFBoard4" method="_on_true_pressed"]
+[connection signal="pressed" from="Minigame/SEFBoard4/False" to="Minigame/SEFBoard4" method="_on_false_pressed"]
+[connection signal="pressed" from="Minigame/SEFBoard5/True" to="Minigame/SEFBoard5" method="_on_true_pressed"]
+[connection signal="pressed" from="Minigame/SEFBoard5/False" to="Minigame/SEFBoard5" method="_on_false_pressed"]
+[connection signal="pressed" from="Minigame/SEFBoard6/True" to="Minigame/SEFBoard6" method="_on_true_pressed"]
+[connection signal="pressed" from="Minigame/SEFBoard6/False" to="Minigame/SEFBoard6" method="_on_false_pressed"]
+[connection signal="pressed" from="Minigame/SEFBoard7/True" to="Minigame/SEFBoard7" method="_on_true_pressed"]
+[connection signal="pressed" from="Minigame/SEFBoard7/False" to="Minigame/SEFBoard7" method="_on_false_pressed"]
+[connection signal="pressed" from="ExitScreen/MainMenu" to="ExitScreen" method="_on_main_menu_pressed"]

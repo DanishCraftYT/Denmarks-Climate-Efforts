@@ -1,0 +1,463 @@
+[gd_scene load_steps=10 format=3 uid="uid://bhnfq7t7df4k0"]
+
+[ext_resource type="Texture2D" uid="uid://dee6yhj1qc82g" path="res://Images/white.jpg" id="1_sfr7l"]
+[ext_resource type="PackedScene" uid="uid://cc01gptkrf2ld" path="res://Nodes/Player.tscn" id="2_of11b"]
+[ext_resource type="Script" path="res://Scripts/ReadMode.gd" id="2_tbf3n"]
+[ext_resource type="Texture2D" uid="uid://bkdkf4mwwhj2i" path="res://Images/Infoboard1/Danmarks Klimamål3.1.png" id="3_m5w46"]
+[ext_resource type="Texture2D" uid="uid://d2op8cn4rdd8c" path="res://Images/Infoboard1/Danmarks Klimamål1.png" id="4_xrb18"]
+[ext_resource type="Texture2D" uid="uid://bjkqm58hlugmb" path="res://Images/Infoboard1/Danmarks Klimamål2.png" id="5_pwofc"]
+[ext_resource type="Texture2D" uid="uid://dqrf7h04ggswt" path="res://Images/Infoboard1/Danmarks Klimamål3.2.png" id="6_khed6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_brer1"]
+font_size = 150
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_j3ib0"]
+font_size = 35
+font_color = Color(0, 0, 0, 1)
+
+[node name="Info" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("2_of11b")]
+
+[node name="InfoBoard" type="Sprite2D" parent="."]
+position = Vector2(2.50002, -1.14441e-05)
+scale = Vector2(0.415527, 0.300781)
+texture = ExtResource("1_sfr7l")
+script = ExtResource("2_tbf3n")
+
+[node name="Title" type="Label" parent="InfoBoard"]
+offset_left = -985.0
+offset_top = -963.0
+offset_right = 983.0
+offset_bottom = -758.0
+text = "Danmarks Klimamål"
+label_settings = SubResource("LabelSettings_brer1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReadMode" type="Node2D" parent="InfoBoard"]
+visible = false
+
+[node name="Headers" type="Node2D" parent="InfoBoard/ReadMode"]
+
+[node name="Aftale" type="Label" parent="InfoBoard/ReadMode/Headers"]
+offset_left = -973.463
+offset_top = -724.779
+offset_right = -830.463
+offset_bottom = -655.779
+text = "Aftale
+"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Vedrører" type="Label" parent="InfoBoard/ReadMode/Headers"]
+offset_left = -742.431
+offset_top = -714.805
+offset_right = -525.431
+offset_bottom = -645.805
+text = "Vedrører"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Forpligtelse & mål" type="Label" parent="InfoBoard/ReadMode/Headers"]
+offset_left = 99.8731
+offset_top = -731.429
+offset_right = 410.873
+offset_bottom = -676.429
+text = "Forpligtelse/mål"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Klimalov" type="Label" parent="InfoBoard/ReadMode"]
+offset_left = -968.65
+offset_top = -628.364
+offset_right = -759.65
+offset_bottom = -559.364
+text = "Klimalov"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="C1_R1" type="Label" parent="InfoBoard/ReadMode/Klimalov"]
+layout_mode = 0
+offset_left = 229.0
+offset_top = -7.0
+offset_right = 921.0
+offset_bottom = 62.0
+text = "Reduktion af drivhusgasser"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Label" type="Label" parent="InfoBoard/ReadMode/Klimalov/C1_R1"]
+layout_mode = 0
+offset_left = 841.929
+offset_top = -19.5974
+offset_right = 2039.93
+offset_bottom = 121.403
+text = "Danmark skal reducere drivhusgasudledningerne 
+med 70 pct. i 2030 ift. 1990"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="C1_R2" type="Label" parent="InfoBoard/ReadMode/Klimalov"]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 96.0
+offset_right = 653.0
+offset_bottom = 165.0
+text = "Klimaneutralitet"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Label" type="Label" parent="InfoBoard/ReadMode/Klimalov/C1_R2"]
+layout_mode = 0
+offset_left = 844.336
+offset_top = 27.013
+offset_right = 1697.34
+offset_bottom = 140.013
+text = "Danmark skal senest i 2050 ikke udlede flere 
+drivhusgasser end der optages"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="EU 2020" type="Label" parent="InfoBoard/ReadMode"]
+offset_left = -980.683
+offset_top = -365.714
+offset_right = -803.683
+offset_bottom = -252.714
+text = "EU:
+2020-mål"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="C1_R1" type="Label" parent="InfoBoard/ReadMode/EU 2020"]
+layout_mode = 0
+offset_left = 243.065
+offset_top = 13.2987
+offset_right = 941.065
+offset_bottom = 126.299
+text = "De danske drivhusgasudledninger
+fra bygninger, landbrug og transport"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Label" type="Label" parent="InfoBoard/ReadMode/EU 2020/C1_R1"]
+layout_mode = 0
+offset_left = 844.711
+offset_top = 36.5714
+offset_right = 1754.71
+offset_bottom = 91.5714
+text = "Skal reduceres med 20 procent fra 2005 til 2020"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="C1_R2" type="Label" parent="InfoBoard/ReadMode/EU 2020"]
+layout_mode = 0
+offset_left = 245.471
+offset_top = 159.584
+offset_right = 856.471
+offset_bottom = 272.584
+text = "Andel vedvarende energi af det
+samlede endelige energiforbrug"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Label" type="Label" parent="InfoBoard/ReadMode/EU 2020/C1_R2"]
+layout_mode = 0
+offset_left = 844.711
+offset_top = 33.2467
+offset_right = 1173.71
+offset_bottom = 88.2467
+text = "30 procent i 2020"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="C1_R3" type="Label" parent="InfoBoard/ReadMode/EU 2020"]
+layout_mode = 0
+offset_left = 238.252
+offset_top = 325.818
+offset_right = 736.252
+offset_bottom = 438.818
+text = "Andel vedvarende energi i 
+transportsektoren"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Label" type="Label" parent="InfoBoard/ReadMode/EU 2020/C1_R3"]
+layout_mode = 0
+offset_left = 847.117
+offset_top = -6.64933
+offset_right = 1176.12
+offset_bottom = 48.3507
+text = "10 procent i 2020"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="EU 2021" type="Label" parent="InfoBoard/ReadMode"]
+offset_left = -997.529
+offset_top = 113.039
+offset_right = -820.529
+offset_bottom = 226.039
+text = "EU:
+2030-mål"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="C1_R1" type="Label" parent="InfoBoard/ReadMode/EU 2021"]
+layout_mode = 0
+offset_left = 247.878
+offset_top = 3.32468
+offset_right = 1074.88
+offset_bottom = 884.325
+text = "EU’s samlede udledninger skal
+reduceres med 40 procent fra
+1990 til 2030 dette indebærer
+følgende overordnede EU-mål:
+
+
+    * 43 pct. reduktion i 2030 ift- 2005-udledningen
+       fra de store udledere af CO2 omfattet af EU’s 
+       system for handel med CO2-kvoter såsom 
+       kraftværker og olie-gassektoren
+
+    * 30 pct. reduktion i 2030 ift- 2005-udledningen
+       fra bygning landbrug og transport
+
+    * Mindst 27 procent vedvarende energi i 2030 
+
+    * Mindst 27 procent energieffektivitet
+"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Label" type="Label" parent="InfoBoard/ReadMode/EU 2021/C1_R1"]
+layout_mode = 0
+offset_left = 859.15
+offset_top = -26.5974
+offset_right = 1754.15
+offset_bottom = 282.403
+text = "EU’s 2030-mål for drivhusgasreduktion i de 
+ikke-kvotebelagte sektorer er udmøntet i en dansk
+national reduktionsforpligtigelse for så vidt angår
+udledningerne i de ikke-kvoteomfattede sektorer, 
+herunder bygninger, landbrug og transport på 39 pct.
+reduktion ift. udledningen i 2005."
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="ImageMode" type="Node2D" parent="InfoBoard"]
+position = Vector2(-6.0165, 3.80479e-05)
+scale = Vector2(2.40658, 3.32468)
+
+[node name="DanmarksKlimamål1" type="Sprite2D" parent="InfoBoard/ImageMode"]
+position = Vector2(15, -151)
+scale = Vector2(0.712144, 0.577778)
+texture = ExtResource("4_xrb18")
+
+[node name="DanmarksKlimamål2" type="Sprite2D" parent="InfoBoard/ImageMode"]
+position = Vector2(15, 5)
+scale = Vector2(0.726358, 0.646617)
+texture = ExtResource("5_pwofc")
+
+[node name="DanmarksKlimamål3_1" type="Sprite2D" parent="InfoBoard/ImageMode"]
+position = Vector2(-195, 189)
+scale = Vector2(0.662722, 0.644813)
+texture = ExtResource("3_m5w46")
+
+[node name="DanmarksKlimamål3_2" type="Sprite2D" parent="InfoBoard/ImageMode"]
+position = Vector2(164, 200)
+scale = Vector2(0.662722, 0.644813)
+texture = ExtResource("6_khed6")
+
+[node name="InfoBoard2" type="Sprite2D" parent="."]
+position = Vector2(1102.5, 0)
+scale = Vector2(0.415527, 0.300781)
+texture = ExtResource("1_sfr7l")
+script = ExtResource("2_tbf3n")
+
+[node name="Title" type="Label" parent="InfoBoard2"]
+offset_left = -985.0
+offset_top = -963.0
+offset_right = 983.0
+offset_bottom = -758.0
+text = "Danmarks Klimamål"
+label_settings = SubResource("LabelSettings_brer1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReadMode" type="Node2D" parent="InfoBoard2"]
+visible = false
+
+[node name="Headers" type="Node2D" parent="InfoBoard2/ReadMode"]
+
+[node name="Aftale" type="Label" parent="InfoBoard2/ReadMode/Headers"]
+offset_left = -973.463
+offset_top = -724.779
+offset_right = -830.463
+offset_bottom = -655.779
+text = "Aftale
+"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Vedrører" type="Label" parent="InfoBoard2/ReadMode/Headers"]
+offset_left = -742.431
+offset_top = -714.805
+offset_right = -525.431
+offset_bottom = -645.805
+text = "Vedrører"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Forpligtelse & mål" type="Label" parent="InfoBoard2/ReadMode/Headers"]
+offset_left = 99.8731
+offset_top = -731.429
+offset_right = 410.873
+offset_bottom = -676.429
+text = "Forpligtelse/mål"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Klimalov" type="Label" parent="InfoBoard2/ReadMode"]
+offset_left = -968.65
+offset_top = -628.364
+offset_right = -759.65
+offset_bottom = -559.364
+text = "Klimalov"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="C1_R1" type="Label" parent="InfoBoard2/ReadMode/Klimalov"]
+layout_mode = 0
+offset_left = 229.0
+offset_top = -7.0
+offset_right = 921.0
+offset_bottom = 62.0
+text = "Reduktion af drivhusgasser"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Label" type="Label" parent="InfoBoard2/ReadMode/Klimalov/C1_R1"]
+layout_mode = 0
+offset_left = 841.929
+offset_top = -19.5974
+offset_right = 2039.93
+offset_bottom = 121.403
+text = "Danmark skal reducere drivhusgasudledningerne 
+med 70 pct. i 2030 ift. 1990"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="C1_R2" type="Label" parent="InfoBoard2/ReadMode/Klimalov"]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 96.0
+offset_right = 653.0
+offset_bottom = 165.0
+text = "Klimaneutralitet"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Label" type="Label" parent="InfoBoard2/ReadMode/Klimalov/C1_R2"]
+layout_mode = 0
+offset_left = 844.336
+offset_top = 27.013
+offset_right = 1697.34
+offset_bottom = 140.013
+text = "Danmark skal senest i 2050 ikke udlede flere 
+drivhusgasser end der optages"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="EU 2020" type="Label" parent="InfoBoard2/ReadMode"]
+offset_left = -980.683
+offset_top = -365.714
+offset_right = -803.683
+offset_bottom = -252.714
+text = "EU:
+2020-mål"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="C1_R1" type="Label" parent="InfoBoard2/ReadMode/EU 2020"]
+layout_mode = 0
+offset_left = 243.065
+offset_top = 13.2987
+offset_right = 941.065
+offset_bottom = 126.299
+text = "De danske drivhusgasudledninger
+fra bygninger, landbrug og transport"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Label" type="Label" parent="InfoBoard2/ReadMode/EU 2020/C1_R1"]
+layout_mode = 0
+offset_left = 844.711
+offset_top = 36.5714
+offset_right = 1754.71
+offset_bottom = 91.5714
+text = "Skal reduceres med 20 procent fra 2005 til 2020"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="C1_R2" type="Label" parent="InfoBoard2/ReadMode/EU 2020"]
+layout_mode = 0
+offset_left = 245.471
+offset_top = 159.584
+offset_right = 856.471
+offset_bottom = 272.584
+text = "Andel vedvarende energi af det
+samlede endelige energiforbrug"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Label" type="Label" parent="InfoBoard2/ReadMode/EU 2020/C1_R2"]
+layout_mode = 0
+offset_left = 844.711
+offset_top = 33.2467
+offset_right = 1173.71
+offset_bottom = 88.2467
+text = "30 procent i 2020"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="C1_R3" type="Label" parent="InfoBoard2/ReadMode/EU 2020"]
+layout_mode = 0
+offset_left = 238.252
+offset_top = 325.818
+offset_right = 736.252
+offset_bottom = 438.818
+text = "Andel vedvarende energi i 
+transportsektoren"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Label" type="Label" parent="InfoBoard2/ReadMode/EU 2020/C1_R3"]
+layout_mode = 0
+offset_left = 847.117
+offset_top = -6.64933
+offset_right = 1176.12
+offset_bottom = 48.3507
+text = "10 procent i 2020"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="EU 2021" type="Label" parent="InfoBoard2/ReadMode"]
+offset_left = -997.529
+offset_top = 113.039
+offset_right = -820.529
+offset_bottom = 226.039
+text = "EU:
+2030-mål"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="C1_R1" type="Label" parent="InfoBoard2/ReadMode/EU 2021"]
+layout_mode = 0
+offset_left = 247.878
+offset_top = 3.32468
+offset_right = 1074.88
+offset_bottom = 884.325
+text = "EU’s samlede udledninger skal
+reduceres med 40 procent fra
+1990 til 2030 dette indebærer
+følgende overordnede EU-mål:
+
+
+    * 43 pct. reduktion i 2030 ift- 2005-udledningen
+       fra de store udledere af CO2 omfattet af EU’s 
+       system for handel med CO2-kvoter såsom 
+       kraftværker og olie-gassektoren
+
+    * 30 pct. reduktion i 2030 ift- 2005-udledningen
+       fra bygning landbrug og transport
+
+    * Mindst 27 procent vedvarende energi i 2030 
+
+    * Mindst 27 procent energieffektivitet
+"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Label" type="Label" parent="InfoBoard2/ReadMode/EU 2021/C1_R1"]
+layout_mode = 0
+offset_left = 859.15
+offset_top = -26.5974
+offset_right = 1754.15
+offset_bottom = 282.403
+text = "EU’s 2030-mål for drivhusgasreduktion i de 
+ikke-kvotebelagte sektorer er udmøntet i en dansk
+national reduktionsforpligtigelse for så vidt angår
+udledningerne i de ikke-kvoteomfattede sektorer, 
+herunder bygninger, landbrug og transport på 39 pct.
+reduktion ift. udledningen i 2005."
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="ImageMode" type="Node2D" parent="InfoBoard2"]
+position = Vector2(-6.0165, 3.80479e-05)
+scale = Vector2(2.40658, 3.32468)

@@ -1,0 +1,569 @@
+[gd_scene load_steps=23 format=3 uid="uid://bhnfq7t7df4k0"]
+
+[ext_resource type="Texture2D" uid="uid://dee6yhj1qc82g" path="res://Images/white.jpg" id="1_sfr7l"]
+[ext_resource type="PackedScene" uid="uid://cc01gptkrf2ld" path="res://Nodes/Player.tscn" id="2_of11b"]
+[ext_resource type="Script" path="res://Scripts/ReadMode.gd" id="2_tbf3n"]
+[ext_resource type="Texture2D" uid="uid://bkdkf4mwwhj2i" path="res://Images/Infoboard1/Danmarks Klimamål3.1.png" id="3_m5w46"]
+[ext_resource type="Texture2D" uid="uid://d2op8cn4rdd8c" path="res://Images/Infoboard1/Danmarks Klimamål1.png" id="4_xrb18"]
+[ext_resource type="Texture2D" uid="uid://bjkqm58hlugmb" path="res://Images/Infoboard1/Danmarks Klimamål2.png" id="5_pwofc"]
+[ext_resource type="Texture2D" uid="uid://dqrf7h04ggswt" path="res://Images/Infoboard1/Danmarks Klimamål3.2.png" id="6_khed6"]
+[ext_resource type="Texture2D" uid="uid://vl7jya0fd2gb" path="res://Images/Infoboard2/Klima Statistik RM.png" id="9_m2bbn"]
+[ext_resource type="Texture2D" uid="uid://cyq33wsrctjw6" path="res://Images/Infoboard2/Klima Statistik.png" id="10_eyg0u"]
+[ext_resource type="Texture2D" uid="uid://c5x3idirvumej" path="res://Images/Infoboard3/Klimaplan1.png" id="10_jif6c"]
+[ext_resource type="Texture2D" uid="uid://d3qvl1qd2e3fq" path="res://Images/Infoboard3/Klimaplan2.png" id="11_6vxjn"]
+[ext_resource type="Texture2D" uid="uid://daoqonqtfm4vh" path="res://Images/Infoboard4/DanmarkGrønEnergiFaktaI1.png" id="12_8fkd3"]
+[ext_resource type="Texture2D" uid="uid://qck2o62h2qlf" path="res://Images/Infoboard4/DanmarkGrønEnergiFakta1.png" id="13_3sjgi"]
+[ext_resource type="Texture2D" uid="uid://cml1f7vtr3rau" path="res://Images/Infoboard4/DanmarkGrønEnergiFaktaI2.png" id="13_kkara"]
+[ext_resource type="Texture2D" uid="uid://cac1rcn0jp01r" path="res://Images/Infoboard4/DanmarkGrønEnergiFakta2.png" id="14_1mb2o"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_brer1"]
+font_size = 150
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_j3ib0"]
+font_size = 35
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e1lda"]
+font_size = 25
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_83idg"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_k0pu3"]
+font_size = 100
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2jej5"]
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jhuth"]
+font_size = 17
+font_color = Color(0, 0, 0, 1)
+
+[node name="Info" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("2_of11b")]
+
+[node name="InfoBoard" type="Sprite2D" parent="."]
+position = Vector2(2.50002, -1.14441e-05)
+scale = Vector2(0.415527, 0.300781)
+texture = ExtResource("1_sfr7l")
+script = ExtResource("2_tbf3n")
+
+[node name="Title" type="Label" parent="InfoBoard"]
+offset_left = -985.0
+offset_top = -963.0
+offset_right = 983.0
+offset_bottom = -758.0
+text = "Danmarks Klimamål"
+label_settings = SubResource("LabelSettings_brer1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReadMode" type="Node2D" parent="InfoBoard"]
+visible = false
+
+[node name="Headers" type="Node2D" parent="InfoBoard/ReadMode"]
+
+[node name="Aftale" type="Label" parent="InfoBoard/ReadMode/Headers"]
+offset_left = -973.463
+offset_top = -724.779
+offset_right = -830.463
+offset_bottom = -655.779
+text = "Aftale
+"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Vedrører" type="Label" parent="InfoBoard/ReadMode/Headers"]
+offset_left = -742.431
+offset_top = -714.805
+offset_right = -525.431
+offset_bottom = -645.805
+text = "Vedrører"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Forpligtelse & mål" type="Label" parent="InfoBoard/ReadMode/Headers"]
+offset_left = 99.8731
+offset_top = -731.429
+offset_right = 410.873
+offset_bottom = -676.429
+text = "Forpligtelse/mål"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Klimalov" type="Label" parent="InfoBoard/ReadMode"]
+offset_left = -968.65
+offset_top = -628.364
+offset_right = -759.65
+offset_bottom = -559.364
+text = "Klimalov"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="C1_R1" type="Label" parent="InfoBoard/ReadMode/Klimalov"]
+layout_mode = 0
+offset_left = 229.0
+offset_top = -7.0
+offset_right = 921.0
+offset_bottom = 62.0
+text = "Reduktion af drivhusgasser"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Label" type="Label" parent="InfoBoard/ReadMode/Klimalov/C1_R1"]
+layout_mode = 0
+offset_left = 841.929
+offset_top = -19.5974
+offset_right = 2039.93
+offset_bottom = 121.403
+text = "Danmark skal reducere drivhusgasudledningerne 
+med 70 pct. i 2030 ift. 1990"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="C1_R2" type="Label" parent="InfoBoard/ReadMode/Klimalov"]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 96.0
+offset_right = 653.0
+offset_bottom = 165.0
+text = "Klimaneutralitet"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Label" type="Label" parent="InfoBoard/ReadMode/Klimalov/C1_R2"]
+layout_mode = 0
+offset_left = 844.336
+offset_top = 27.013
+offset_right = 1697.34
+offset_bottom = 140.013
+text = "Danmark skal senest i 2050 ikke udlede flere 
+drivhusgasser end der optages"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="EU 2020" type="Label" parent="InfoBoard/ReadMode"]
+offset_left = -980.683
+offset_top = -365.714
+offset_right = -803.683
+offset_bottom = -252.714
+text = "EU:
+2020-mål"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="C1_R1" type="Label" parent="InfoBoard/ReadMode/EU 2020"]
+layout_mode = 0
+offset_left = 243.065
+offset_top = 13.2987
+offset_right = 941.065
+offset_bottom = 126.299
+text = "De danske drivhusgasudledninger
+fra bygninger, landbrug og transport"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Label" type="Label" parent="InfoBoard/ReadMode/EU 2020/C1_R1"]
+layout_mode = 0
+offset_left = 844.711
+offset_top = 36.5714
+offset_right = 1754.71
+offset_bottom = 91.5714
+text = "Skal reduceres med 20 procent fra 2005 til 2020"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="C1_R2" type="Label" parent="InfoBoard/ReadMode/EU 2020"]
+layout_mode = 0
+offset_left = 245.471
+offset_top = 159.584
+offset_right = 856.471
+offset_bottom = 272.584
+text = "Andel vedvarende energi af det
+samlede endelige energiforbrug"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Label" type="Label" parent="InfoBoard/ReadMode/EU 2020/C1_R2"]
+layout_mode = 0
+offset_left = 844.711
+offset_top = 33.2467
+offset_right = 1173.71
+offset_bottom = 88.2467
+text = "30 procent i 2020"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="C1_R3" type="Label" parent="InfoBoard/ReadMode/EU 2020"]
+layout_mode = 0
+offset_left = 238.252
+offset_top = 325.818
+offset_right = 736.252
+offset_bottom = 438.818
+text = "Andel vedvarende energi i 
+transportsektoren"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Label" type="Label" parent="InfoBoard/ReadMode/EU 2020/C1_R3"]
+layout_mode = 0
+offset_left = 847.117
+offset_top = -6.64933
+offset_right = 1176.12
+offset_bottom = 48.3507
+text = "10 procent i 2020"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="EU 2021" type="Label" parent="InfoBoard/ReadMode"]
+offset_left = -997.529
+offset_top = 113.039
+offset_right = -820.529
+offset_bottom = 226.039
+text = "EU:
+2030-mål"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="C1_R1" type="Label" parent="InfoBoard/ReadMode/EU 2021"]
+layout_mode = 0
+offset_left = 247.878
+offset_top = 3.32468
+offset_right = 1074.88
+offset_bottom = 884.325
+text = "EU’s samlede udledninger skal
+reduceres med 40 procent fra
+1990 til 2030 dette indebærer
+følgende overordnede EU-mål:
+
+
+    * 43 pct. reduktion i 2030 ift- 2005-udledningen
+       fra de store udledere af CO2 omfattet af EU’s 
+       system for handel med CO2-kvoter såsom 
+       kraftværker og olie-gassektoren
+
+    * 30 pct. reduktion i 2030 ift- 2005-udledningen
+       fra bygning landbrug og transport
+
+    * Mindst 27 procent vedvarende energi i 2030 
+
+    * Mindst 27 procent energieffektivitet
+"
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="Label" type="Label" parent="InfoBoard/ReadMode/EU 2021/C1_R1"]
+layout_mode = 0
+offset_left = 859.15
+offset_top = -26.5974
+offset_right = 1754.15
+offset_bottom = 282.403
+text = "EU’s 2030-mål for drivhusgasreduktion i de 
+ikke-kvotebelagte sektorer er udmøntet i en dansk
+national reduktionsforpligtigelse for så vidt angår
+udledningerne i de ikke-kvoteomfattede sektorer, 
+herunder bygninger, landbrug og transport på 39 pct.
+reduktion ift. udledningen i 2005."
+label_settings = SubResource("LabelSettings_j3ib0")
+
+[node name="ImageMode" type="Node2D" parent="InfoBoard"]
+position = Vector2(-6.0165, 3.80479e-05)
+scale = Vector2(2.40658, 3.32468)
+
+[node name="DanmarksKlimamål1" type="Sprite2D" parent="InfoBoard/ImageMode"]
+position = Vector2(15, -151)
+scale = Vector2(0.712144, 0.577778)
+texture = ExtResource("4_xrb18")
+
+[node name="DanmarksKlimamål2" type="Sprite2D" parent="InfoBoard/ImageMode"]
+position = Vector2(15, 5)
+scale = Vector2(0.726358, 0.646617)
+texture = ExtResource("5_pwofc")
+
+[node name="DanmarksKlimamål3_1" type="Sprite2D" parent="InfoBoard/ImageMode"]
+position = Vector2(-195, 189)
+scale = Vector2(0.662722, 0.644813)
+texture = ExtResource("3_m5w46")
+
+[node name="DanmarksKlimamål3_2" type="Sprite2D" parent="InfoBoard/ImageMode"]
+position = Vector2(164, 200)
+scale = Vector2(0.662722, 0.644813)
+texture = ExtResource("6_khed6")
+
+[node name="InfoBoard2" type="Sprite2D" parent="."]
+position = Vector2(2002.5, 0)
+scale = Vector2(0.415527, 0.300781)
+texture = ExtResource("1_sfr7l")
+script = ExtResource("2_tbf3n")
+
+[node name="Title" type="Label" parent="InfoBoard2"]
+offset_left = -985.0
+offset_top = -963.0
+offset_right = 983.0
+offset_bottom = -758.0
+text = "Danmarks udledese af CO2"
+label_settings = SubResource("LabelSettings_brer1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReadMode" type="Node2D" parent="InfoBoard2"]
+visible = false
+
+[node name="KlimaStatistikRM" type="Sprite2D" parent="InfoBoard2/ReadMode"]
+position = Vector2(-335.718, -339.117)
+scale = Vector2(1.72169, 2.53175)
+texture = ExtResource("9_m2bbn")
+
+[node name="Green" type="ColorRect" parent="InfoBoard2/ReadMode/KlimaStatistikRM"]
+offset_left = 394.181
+offset_top = -133.946
+offset_right = 434.181
+offset_bottom = -93.9459
+scale = Vector2(0.9, 0.9)
+color = Color(0.588235, 0.784314, 0.627451, 1)
+
+[node name="GreenText" type="Label" parent="InfoBoard2/ReadMode/KlimaStatistikRM/Green"]
+layout_mode = 0
+offset_left = 48.1466
+offset_top = -13.1319
+offset_right = 408.147
+offset_bottom = 59.8681
+text = "Landbrug og arealanvendelse
+(LULUCF)"
+label_settings = SubResource("LabelSettings_e1lda")
+vertical_alignment = 1
+
+[node name="Grey" type="ColorRect" parent="InfoBoard2/ReadMode/KlimaStatistikRM"]
+offset_left = 398.375
+offset_top = -61.7202
+offset_right = 438.375
+offset_bottom = -21.7202
+scale = Vector2(0.9, 0.9)
+color = Color(0.847059, 0.847059, 0.847059, 1)
+
+[node name="GreyText" type="Label" parent="InfoBoard2/ReadMode/KlimaStatistikRM/Grey"]
+layout_mode = 0
+offset_left = 48.1466
+offset_top = -13.1319
+offset_right = 408.147
+offset_bottom = 59.8681
+text = "Transport"
+label_settings = SubResource("LabelSettings_e1lda")
+vertical_alignment = 1
+
+[node name="Red" type="ColorRect" parent="InfoBoard2/ReadMode/KlimaStatistikRM"]
+offset_left = 395.579
+offset_top = 5.25278
+offset_right = 435.579
+offset_bottom = 45.2528
+scale = Vector2(0.9, 0.9)
+color = Color(0.960784, 0.745098, 0.690196, 1)
+
+[node name="RedText" type="Label" parent="InfoBoard2/ReadMode/KlimaStatistikRM/Red"]
+layout_mode = 0
+offset_left = 48.1466
+offset_top = -13.1319
+offset_right = 408.147
+offset_bottom = 59.8681
+text = "Affald"
+label_settings = SubResource("LabelSettings_e1lda")
+vertical_alignment = 1
+
+[node name="Blue" type="ColorRect" parent="InfoBoard2/ReadMode/KlimaStatistikRM"]
+offset_left = 395.579
+offset_top = 72.2257
+offset_right = 435.579
+offset_bottom = 112.226
+scale = Vector2(0.9, 0.9)
+color = Color(0, 0.270588, 0.490196, 1)
+
+[node name="BlueText" type="Label" parent="InfoBoard2/ReadMode/KlimaStatistikRM/Blue"]
+layout_mode = 0
+offset_left = 48.1466
+offset_top = -13.1319
+offset_right = 408.147
+offset_bottom = 59.8681
+text = "Energi, industri og varme"
+label_settings = SubResource("LabelSettings_e1lda")
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="InfoBoard2/ReadMode/KlimaStatistikRM"]
+offset_left = -389.988
+offset_top = 161.523
+offset_right = 749.012
+offset_bottom = 342.523
+text = "I perioden fra 1990 til 2020 faldt de danske udledninger med ca. 43 pct. Faldet 
+skyldes hovedsageligt et stigende forbrug af vedvarende energi i
+energi-, industri- og varmesektoren. Udledningerne fra landbrugs-, affalds- og 
+transportsektoren er derimod ikke reduceret tilsvarende i perioden. "
+label_settings = SubResource("LabelSettings_83idg")
+
+[node name="ImageMode" type="Node2D" parent="InfoBoard2"]
+position = Vector2(-6.0165, 3.80479e-05)
+scale = Vector2(2.40658, 3.32468)
+
+[node name="KlimaStatistik" type="Sprite2D" parent="InfoBoard2/ImageMode"]
+position = Vector2(1.99998, -85)
+scale = Vector2(0.679567, 0.630102)
+texture = ExtResource("10_eyg0u")
+
+[node name="InfoBoard3" type="Sprite2D" parent="."]
+position = Vector2(4002.5, 0)
+scale = Vector2(0.415527, 0.300781)
+texture = ExtResource("1_sfr7l")
+script = ExtResource("2_tbf3n")
+
+[node name="Title" type="Label" parent="InfoBoard3"]
+offset_left = -985.0
+offset_top = -963.0
+offset_right = 983.0
+offset_bottom = -758.0
+text = "Danmarks klimaplan"
+label_settings = SubResource("LabelSettings_brer1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReadMode" type="Node2D" parent="InfoBoard3"]
+visible = false
+
+[node name="2Title" type="Label" parent="InfoBoard3/ReadMode"]
+offset_left = -496.959
+offset_top = -728.104
+offset_right = 529.041
+offset_bottom = -591.104
+text = "2: CO2 skal indfanges"
+label_settings = SubResource("LabelSettings_k0pu3")
+
+[node name="2Text" type="Label" parent="InfoBoard3/ReadMode/2Title"]
+layout_mode = 0
+offset_left = -496.0
+offset_top = 136.0
+offset_right = 1499.0
+offset_bottom = 709.0
+text = "Regeringen vil investere i teknologier, der gør det muligt at indfange og lagre CO2,
+så den ikke ender i atmosfæren og opvarmer jorden.
+
+Det kan for eksempel være at indfange CO2 fra industrien og omdanne
+den til grøn energi eller lagre den i jorden.
+
+Så meget CO2 sparer det: Forslaget vil reducere udslip
+ af drivhusgasser med 0,3 millioner ton CO2 i 2030."
+label_settings = SubResource("LabelSettings_2jej5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="3Title" type="Label" parent="InfoBoard3/ReadMode"]
+offset_left = -814.628
+offset_top = 29.9221
+offset_right = 732.372
+offset_bottom = 166.922
+text = "3: Penge til en grønnere industri"
+label_settings = SubResource("LabelSettings_k0pu3")
+
+[node name="3Text" type="Label" parent="InfoBoard3/ReadMode/3Title"]
+layout_mode = 0
+offset_left = -187.714
+offset_top = 142.961
+offset_right = 1807.29
+offset_bottom = 715.961
+text = "Industrien skal have tilskud til at omstille til
+mere grøn strøm og bruge energien mere effektivt.
+
+Regeringen vil derudover sætte penge af til mere biogas. Biogas er nødvendigt for
+nogle industrier, som ikke kan bruge den grønne strøm. Det gælder for eksempel
+en virksomhed som Aalborg Portland, der laver cement. For at lave cement 
+kræves så høje temperaturer, at det ikke kan klares med vedvarende energi.
+
+Så meget CO2 sparer det: Forslaget vil reducere 
+udslip af drivhusgasser med 0,3 millioner ton CO2 i 2030."
+label_settings = SubResource("LabelSettings_2jej5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ImageMode" type="Node2D" parent="InfoBoard3"]
+position = Vector2(-6.0165, 3.80479e-05)
+scale = Vector2(2.40658, 3.32468)
+
+[node name="Klimaplan1" type="Sprite2D" parent="InfoBoard3/ImageMode"]
+position = Vector2(-9.12476, -98.125)
+scale = Vector2(0.827822, 0.808631)
+texture = ExtResource("10_jif6c")
+
+[node name="Klimaplan2" type="Sprite2D" parent="InfoBoard3/ImageMode"]
+position = Vector2(-8, 164)
+scale = Vector2(0.805943, 0.749336)
+texture = ExtResource("11_6vxjn")
+
+[node name="InfoBoard4" type="Sprite2D" parent="."]
+position = Vector2(6002.5, 0)
+scale = Vector2(0.415527, 0.300781)
+texture = ExtResource("1_sfr7l")
+script = ExtResource("2_tbf3n")
+
+[node name="Title" type="Label" parent="InfoBoard4"]
+offset_left = -985.0
+offset_top = -963.0
+offset_right = 983.0
+offset_bottom = -758.0
+text = "Danmarks Klimaindsats"
+label_settings = SubResource("LabelSettings_brer1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReadMode" type="Node2D" parent="InfoBoard4"]
+
+[node name="DanmarkGrønEnergiFaktaI1" type="Sprite2D" parent="InfoBoard4/ReadMode"]
+position = Vector2(-547.497, -379.013)
+scale = Vector2(1.48979, 2.34509)
+texture = ExtResource("12_8fkd3")
+
+[node name="DGEFText" type="Label" parent="InfoBoard4/ReadMode/DanmarkGrønEnergiFaktaI1"]
+offset_left = 318.0
+offset_top = -159.0
+offset_right = 954.0
+offset_bottom = 149.0
+text = "Grøn energi i Danmark
+
+Den danske regerings helt store klimamål er, at vi som samfund skal være helt  
+klimaneutrale i 2050. Det vil sige, at vi som samlet enhed ikke må udlede flere 
+drivhusgasser end der bliver optaget.
+
+Danmark betragtes af mange, som et foregangsland når det kommer til grøn energi. 
+Dette skyldes, blandt andet, vores teknologiske udvikling og prioritering af at
+udvide kapaciteten til f.eks. sol-og vind energi. I slutningen af 2022 var antallet af
+landvindmøller ca. 4200 og antallet af havvindmøller 630. Kigger man på solenergi, er der
+ca. 115.000 solcelleanlæg på dansk grund, hvilket er ca. 9000 mere end i 2019."
+label_settings = SubResource("LabelSettings_jhuth")
+
+[node name="DanmarkGrønEnergiFaktaI2" type="Sprite2D" parent="InfoBoard4/ReadMode"]
+position = Vector2(468.08, 518.65)
+scale = Vector2(1.52025, 2.30866)
+texture = ExtResource("13_kkara")
+
+[node name="DGEFText" type="Label" parent="InfoBoard4/ReadMode/DanmarkGrønEnergiFaktaI2"]
+offset_left = -958.915
+offset_top = -233.564
+offset_right = -15.9147
+offset_bottom = 195.436
+text = "Hvor meget grøn energi producerer Danmark?
+
+Det er især inden for elproduktion, fjernvarme, transport og energiforsyning,
+at vi har set en stor udvikling i alternative og grønnere energiløsninger i 
+Danmark. Sol-og vindenergi er et af de områder, hvor vi i Danmark har et stort
+fokus. Sammenlagt stod sol-og vind for 59.3 % af den samlede danske 
+energiforbrugi 2022, hvilket slog den tidligere rekord fra 2021.
+
+På de to renere energiformer, har vi set en markant stigning sammenlignet
+med tidligere. Eksempelvis er den samlede vindenergi steget med 33,2 % siden 
+2009, hvor solenergi er steget med 4,4 % siden 2015.
+
+Vi har set nogle flotte stigninger i de grønne energiformer i Danmark de 
+seneste par år, og vi er som samfund bestemt på vej i den rigtige retning.
+Det kræver dog flere investeringer og endnu større fokus, hvis vi skal nå 
+klimamålene for 2050.
+"
+label_settings = SubResource("LabelSettings_jhuth")
+
+[node name="ImageMode" type="Node2D" parent="InfoBoard4"]
+visible = false
+position = Vector2(-6.0165, 3.80479e-05)
+scale = Vector2(2.40658, 3.32468)
+
+[node name="DanmarkGrønEnergiFakta1" type="Sprite2D" parent="InfoBoard4/ImageMode"]
+position = Vector2(4, -110)
+scale = Vector2(0.647025, 0.697658)
+texture = ExtResource("13_3sjgi")
+
+[node name="DanmarkGrønEnergiFakta2" type="Sprite2D" parent="InfoBoard4/ImageMode"]
+position = Vector2(-0.125, 158)
+scale = Vector2(0.564793, 0.579832)
+texture = ExtResource("14_1mb2o")

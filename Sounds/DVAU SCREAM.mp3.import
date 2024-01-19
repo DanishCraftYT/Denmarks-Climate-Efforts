@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://db4b2dsskk3b5"
+path="res://.godot/imported/DVAU SCREAM.mp3-e6a16119867a7d257abfa47f17b269f5.mp3str"
+
+[deps]
+
+source_file="res://Sounds/DVAU SCREAM.mp3"
+dest_files=["res://.godot/imported/DVAU SCREAM.mp3-e6a16119867a7d257abfa47f17b269f5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
