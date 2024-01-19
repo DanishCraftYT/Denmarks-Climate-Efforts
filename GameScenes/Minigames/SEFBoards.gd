@@ -1,7 +1,7 @@
 extends Node2D
 
-var true_boards = ["SEFBoard", "SEFBoard3", "SEFBoard4", "SEFBoard6"] # contains the names of all the boards that are true.
-var false_boards = ["SEFBoard2", "SEFBoard5", "SEFBoard7"] # contains the names of all the boards that are false.
+var true_boards = ["SEFBoard", "SEFBoard3", "SEFBoard6"] # contains the names of all the boards that are true.
+var false_boards = ["SEFBoard2", "SEFBoard4", "SEFBoard5", "SEFBoard7"] # contains the names of all the boards that are false.
 
 func show_exit_screen():
 	if Globals.score == 1:

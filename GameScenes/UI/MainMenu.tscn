@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://coypalerdkr4k"]
+[gd_scene load_steps=12 format=3 uid="uid://coypalerdkr4k"]
 
 [ext_resource type="Script" path="res://Scripts/UI/MainMenuScript.gd" id="1_flx1b"]
 [ext_resource type="FontFile" uid="uid://c3sya0iujd34p" path="res://Fonts/Teko/Teko-VariableFont_wght.ttf" id="2_aip24"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dlctyqmhkgxnd" path="res://Images/DA.png" id="5_80vw7"]
 [ext_resource type="Texture2D" uid="uid://c11ei5ubp8tkf" path="res://Images/UA.png" id="6_7keyf"]
 [ext_resource type="AudioStream" uid="uid://db4b2dsskk3b5" path="res://Sounds/DVAU SCREAM.mp3" id="8_j2u4f"]
+[ext_resource type="Texture2D" uid="uid://c5clhdhnggtvw" path="res://Images/GodotIcon.svg" id="9_pqosn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lvmal"]
 font = ExtResource("2_aip24")
@@ -20,7 +21,6 @@ font_size = 30
 script = ExtResource("1_flx1b")
 
 [node name="Main" type="Node2D" parent="."]
-visible = false
 
 [node name="Title" type="Label" parent="Main"]
 anchors_preset = 5
@@ -96,6 +96,7 @@ offset_bottom = 114.0
 text = "Main Menu"
 
 [node name="Credits" type="Node2D" parent="."]
+visible = false
 script = ExtResource("3_ym3mm")
 
 [node name="Title" type="Label" parent="Credits"]
@@ -115,16 +116,21 @@ vertical_alignment = 1
 [node name="Label" type="Label" parent="Credits"]
 offset_left = -136.0
 offset_top = -92.0
-offset_right = 167.0
-offset_bottom = -48.0
-text = "lavet af Danish Craft."
+offset_right = 219.0
+offset_bottom = 180.0
+text = "lavet af Danish Craft.
+lavet i Godot -------------->
+Fonts:
+Teko (Google Fonts).
+Audio:
+DarkViperAU OHKO Fail"
 label_settings = SubResource("LabelSettings_04n2i")
 
 [node name="MainMenu" type="Button" parent="Credits"]
 offset_left = -101.0
-offset_top = -10.0
+offset_top = 100.0
 offset_right = 103.0
-offset_bottom = 34.0
+offset_bottom = 144.0
 text = "Main Menu"
 
 [node name="LB" type="Button" parent="Credits"]
@@ -157,6 +163,10 @@ icon = ExtResource("6_7keyf")
 
 [node name="DVAUPlayer" type="AudioStreamPlayer2D" parent="Credits"]
 stream = ExtResource("8_j2u4f")
+
+[node name="GodotIcon" type="Sprite2D" parent="Credits"]
+position = Vector2(288, -24)
+texture = ExtResource("9_pqosn")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

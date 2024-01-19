@@ -188,7 +188,7 @@ offset_left = -985.0
 offset_top = -963.0
 offset_right = 983.0
 offset_bottom = -758.0
-text = "for Danmark omkring 53%
+text = "får Danmark ca. 53%
 af deres energi fra solen?"
 label_settings = SubResource("LabelSettings_him4x")
 horizontal_alignment = 1
@@ -333,8 +333,8 @@ offset_right = 983.0
 offset_bottom = -758.0
 text = "er det sandt at Danmark
 vil reducere CO2
-udledningen med 80%
-i forhold til 1990?"
+udledningen inden 2030
+med 80% i forhold til 1990?"
 label_settings = SubResource("LabelSettings_him4x")
 horizontal_alignment = 1
 vertical_alignment = 1

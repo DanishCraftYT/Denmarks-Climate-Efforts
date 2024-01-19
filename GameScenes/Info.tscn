@@ -70,52 +70,52 @@ visible = false
 [node name="Headers" type="Node2D" parent="InfoBoard/ReadMode"]
 
 [node name="Aftale" type="Label" parent="InfoBoard/ReadMode/Headers"]
-offset_left = -973.463
-offset_top = -724.779
-offset_right = -830.463
-offset_bottom = -655.779
+offset_left = -1000.46
+offset_top = -750.779
+offset_right = -857.463
+offset_bottom = -681.779
 text = "Aftale
 "
 label_settings = SubResource("LabelSettings_j3ib0")
 
 [node name="Vedrører" type="Label" parent="InfoBoard/ReadMode/Headers"]
-offset_left = -742.431
-offset_top = -714.805
-offset_right = -525.431
-offset_bottom = -645.805
+offset_left = -756.87
+offset_top = -750.779
+offset_right = -539.87
+offset_bottom = -681.779
 text = "Vedrører"
 label_settings = SubResource("LabelSettings_j3ib0")
 
 [node name="Forpligtelse & mål" type="Label" parent="InfoBoard/ReadMode/Headers"]
-offset_left = 99.8731
-offset_top = -731.429
+offset_left = 99.873
+offset_top = -750.779
 offset_right = 410.873
-offset_bottom = -676.429
+offset_bottom = -695.779
 text = "Forpligtelse/mål"
 label_settings = SubResource("LabelSettings_j3ib0")
 
 [node name="Klimalov" type="Label" parent="InfoBoard/ReadMode"]
-offset_left = -968.65
+offset_left = -1000.46
 offset_top = -628.364
-offset_right = -759.65
+offset_right = -791.463
 offset_bottom = -559.364
 text = "Klimalov"
 label_settings = SubResource("LabelSettings_j3ib0")
 
 [node name="C1_R1" type="Label" parent="InfoBoard/ReadMode/Klimalov"]
 layout_mode = 0
-offset_left = 229.0
+offset_left = 243.065
 offset_top = -7.0
-offset_right = 921.0
+offset_right = 935.065
 offset_bottom = 62.0
 text = "Reduktion af drivhusgasser"
 label_settings = SubResource("LabelSettings_j3ib0")
 
 [node name="Label" type="Label" parent="InfoBoard/ReadMode/Klimalov/C1_R1"]
 layout_mode = 0
-offset_left = 841.929
-offset_top = -19.5974
-offset_right = 2039.93
+offset_left = 859.15
+offset_top = -19.597
+offset_right = 2057.15
 offset_bottom = 121.403
 text = "Danmark skal reducere drivhusgasudledningerne 
 med 70 pct. i 2030 ift. 1990"
@@ -123,27 +123,27 @@ label_settings = SubResource("LabelSettings_j3ib0")
 
 [node name="C1_R2" type="Label" parent="InfoBoard/ReadMode/Klimalov"]
 layout_mode = 0
-offset_left = 229.0
+offset_left = 243.065
 offset_top = 96.0
-offset_right = 653.0
+offset_right = 667.065
 offset_bottom = 165.0
 text = "Klimaneutralitet"
 label_settings = SubResource("LabelSettings_j3ib0")
 
 [node name="Label" type="Label" parent="InfoBoard/ReadMode/Klimalov/C1_R2"]
 layout_mode = 0
-offset_left = 844.336
+offset_left = 859.15
 offset_top = 27.013
-offset_right = 1697.34
+offset_right = 1712.15
 offset_bottom = 140.013
 text = "Danmark skal senest i 2050 ikke udlede flere 
 drivhusgasser end der optages"
 label_settings = SubResource("LabelSettings_j3ib0")
 
 [node name="EU 2020" type="Label" parent="InfoBoard/ReadMode"]
-offset_left = -980.683
+offset_left = -1000.46
 offset_top = -365.714
-offset_right = -803.683
+offset_right = -823.463
 offset_bottom = -252.714
 text = "EU:
 2020-mål"
@@ -161,18 +161,18 @@ label_settings = SubResource("LabelSettings_j3ib0")
 
 [node name="Label" type="Label" parent="InfoBoard/ReadMode/EU 2020/C1_R1"]
 layout_mode = 0
-offset_left = 844.711
-offset_top = 36.5714
-offset_right = 1754.71
-offset_bottom = 91.5714
+offset_left = 859.15
+offset_top = 36.571
+offset_right = 1769.15
+offset_bottom = 91.571
 text = "Skal reduceres med 20 procent fra 2005 til 2020"
 label_settings = SubResource("LabelSettings_j3ib0")
 
 [node name="C1_R2" type="Label" parent="InfoBoard/ReadMode/EU 2020"]
 layout_mode = 0
-offset_left = 245.471
+offset_left = 243.065
 offset_top = 159.584
-offset_right = 856.471
+offset_right = 854.065
 offset_bottom = 272.584
 text = "Andel vedvarende energi af det
 samlede endelige energiforbrug"
@@ -180,18 +180,18 @@ label_settings = SubResource("LabelSettings_j3ib0")
 
 [node name="Label" type="Label" parent="InfoBoard/ReadMode/EU 2020/C1_R2"]
 layout_mode = 0
-offset_left = 844.711
-offset_top = 33.2467
-offset_right = 1173.71
-offset_bottom = 88.2467
+offset_left = 859.15
+offset_top = 33.247
+offset_right = 1188.15
+offset_bottom = 88.247
 text = "30 procent i 2020"
 label_settings = SubResource("LabelSettings_j3ib0")
 
 [node name="C1_R3" type="Label" parent="InfoBoard/ReadMode/EU 2020"]
 layout_mode = 0
-offset_left = 238.252
+offset_left = 243.065
 offset_top = 325.818
-offset_right = 736.252
+offset_right = 741.065
 offset_bottom = 438.818
 text = "Andel vedvarende energi i 
 transportsektoren"
@@ -199,17 +199,17 @@ label_settings = SubResource("LabelSettings_j3ib0")
 
 [node name="Label" type="Label" parent="InfoBoard/ReadMode/EU 2020/C1_R3"]
 layout_mode = 0
-offset_left = 847.117
-offset_top = -6.64933
-offset_right = 1176.12
-offset_bottom = 48.3507
+offset_left = 859.15
+offset_top = -6.649
+offset_right = 1188.15
+offset_bottom = 48.351
 text = "10 procent i 2020"
 label_settings = SubResource("LabelSettings_j3ib0")
 
 [node name="EU 2021" type="Label" parent="InfoBoard/ReadMode"]
-offset_left = -997.529
+offset_left = -1000.46
 offset_top = 113.039
-offset_right = -820.529
+offset_right = -823.463
 offset_bottom = 226.039
 text = "EU:
 2030-mål"
@@ -217,9 +217,9 @@ label_settings = SubResource("LabelSettings_j3ib0")
 
 [node name="C1_R1" type="Label" parent="InfoBoard/ReadMode/EU 2021"]
 layout_mode = 0
-offset_left = 247.878
-offset_top = 3.32468
-offset_right = 1074.88
+offset_left = 243.065
+offset_top = 3.325
+offset_right = 1070.07
 offset_bottom = 884.325
 text = "EU’s samlede udledninger skal
 reduceres med 40 procent fra
@@ -304,9 +304,9 @@ scale = Vector2(1.72169, 2.53175)
 texture = ExtResource("9_m2bbn")
 
 [node name="Green" type="ColorRect" parent="InfoBoard2/ReadMode/KlimaStatistikRM"]
-offset_left = 394.181
+offset_left = 398.375
 offset_top = -133.946
-offset_right = 434.181
+offset_right = 438.375
 offset_bottom = -93.9459
 scale = Vector2(0.9, 0.9)
 color = Color(0.588235, 0.784314, 0.627451, 1)
@@ -341,10 +341,10 @@ label_settings = SubResource("LabelSettings_e1lda")
 vertical_alignment = 1
 
 [node name="Red" type="ColorRect" parent="InfoBoard2/ReadMode/KlimaStatistikRM"]
-offset_left = 395.579
-offset_top = 5.25278
-offset_right = 435.579
-offset_bottom = 45.2528
+offset_left = 398.375
+offset_top = 5.253
+offset_right = 438.375
+offset_bottom = 45.253
 scale = Vector2(0.9, 0.9)
 color = Color(0.960784, 0.745098, 0.690196, 1)
 
@@ -359,9 +359,9 @@ label_settings = SubResource("LabelSettings_e1lda")
 vertical_alignment = 1
 
 [node name="Blue" type="ColorRect" parent="InfoBoard2/ReadMode/KlimaStatistikRM"]
-offset_left = 395.579
-offset_top = 72.2257
-offset_right = 435.579
+offset_left = 398.375
+offset_top = 72.226
+offset_right = 438.375
 offset_bottom = 112.226
 scale = Vector2(0.9, 0.9)
 color = Color(0, 0.270588, 0.490196, 1)
@@ -500,6 +500,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ReadMode" type="Node2D" parent="InfoBoard4"]
+visible = false
 
 [node name="DanmarkGrønEnergiFaktaI1" type="Sprite2D" parent="InfoBoard4/ReadMode"]
 position = Vector2(-547.497, -379.013)
@@ -554,7 +555,6 @@ klimamålene for 2050.
 label_settings = SubResource("LabelSettings_jhuth")
 
 [node name="ImageMode" type="Node2D" parent="InfoBoard4"]
-visible = false
 position = Vector2(-6.0165, 3.80479e-05)
 scale = Vector2(2.40658, 3.32468)
 
