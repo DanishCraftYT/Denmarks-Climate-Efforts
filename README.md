@@ -1,4 +1,4 @@
-# Denmarks-Climate-Effort
+# Denmarks-Climate-Efforts
 this repo is for a school project. fell free to use this for whatever you want.<br>
 
 # DISCLAIMER
